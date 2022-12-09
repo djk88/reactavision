@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { ResultCard } from './ResultCard'
+import { API_KEY } from '../globals/globals';
 
-const POPULAR_API = "https://api.themoviedb.org/3/movie/popular?api_key=a87239141e560f2d1ffa1d2c5b416813&language=en-US&page=1";
-const TOP_RATED_API = "https://api.themoviedb.org/3/movie/top_rated?api_key=a87239141e560f2d1ffa1d2c5b416813&language=en-US&page=1";
-const UPCOMMING_API = "https://api.themoviedb.org/3/movie/upcoming?api_key=a87239141e560f2d1ffa1d2c5b416813&language=en-US&page=1";
+const POPULAR_API = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+const TOP_RATED_API = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`;
+const UPCOMMING_API = `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`;
+const NOW_PLAYING_API = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`;
 
 export const Main = () => {
 
@@ -22,6 +24,9 @@ export const Main = () => {
             case "upcomming":
                 setEndPoint(UPCOMMING_API);
                 break;
+            case "nowPlaying":
+                setEndPoint(NOW_PLAYING_API);
+                break;
             default:
                 console.log("error")
         }
@@ -31,7 +36,7 @@ export const Main = () => {
         fetch(endPoint)
             .then(res => res.json())
             .then(data => {
-                setMovies(data.results)
+                setMovies(data.results.slice(0, 12))
             });
     }, [endPoint])
 
@@ -44,6 +49,7 @@ export const Main = () => {
                         <option value="popularMovies" >Popular Movies</option>
                         <option value="topRated" >Top Rated</option>
                         <option value="upcomming" >Upcomming</option>
+                        <option value="nowPlaying" >Now Playing</option>
                     </select>
                 </div>
                 {movies.length > 0 && (

@@ -17,10 +17,7 @@ export const Header = () => {
                             <Link to="/PageAbout">About</Link>
                         </li>
                         <li>
-                            <Link to="/FavoriteList">Favorite List</Link>
-                        </li>
-                        <li>
-                            {/* <Link to="/Watched">Watched</Link> */}
+                            <Link to="/PageFavoriteList">Favorite List</Link>
                         </li>
                         <li>
                             <Link to="/PageSearch" className="btn">Search movies</Link>
