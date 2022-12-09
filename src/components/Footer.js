@@ -5,6 +5,6 @@ export const Footer = () => {
         <footer>
             <p>&copy; {getYear()} David Lisa</p>
         </footer>
-    )
-}
+    );
+};
 
