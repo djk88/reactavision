@@ -2,8 +2,7 @@ import '../App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
-import { FavoriteList } from '../components/FavoriteList';
-import { Watched } from '../components/Watched';
+import { PageFavoriteList } from '../pages/PageFavoriteList';
 import { PageSearch } from '../pages/PageSearch';
 import { PageAbout } from '../pages/PageAbout';
 import { Main } from '../components/Main';
@@ -16,8 +15,7 @@ function AppRouter() {
             <Routes>
                 <Route path="/" exact element={<Main />} />
                 <Route path="/PageAbout" exact element={<PageAbout />} />
-                <Route path="/FavoriteList" exact element={<FavoriteList />} />
-                <Route path="/Watched" exact element={<Watched />} />
+                <Route path="/PageFavoriteList" exact element={<PageFavoriteList />} />
                 <Route path="/PageSearch" exact element={<PageSearch />} />
             </Routes>
             <Footer />
