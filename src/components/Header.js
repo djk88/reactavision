@@ -14,13 +14,16 @@ export const Header = () => {
                             <Link to="/">Home</Link>
                         </li>
                         <li>
+                            <Link to="/PageAbout">About</Link>
+                        </li>
+                        <li>
                             <Link to="/FavoriteList">Favorite List</Link>
                         </li>
                         <li>
                             {/* <Link to="/Watched">Watched</Link> */}
                         </li>
                         <li>
-                            <Link to="/Search" className="btn">Search movies</Link>
+                            <Link to="/PageSearch" className="btn">Search movies</Link>
                         </li>
                     </ul>
                 </div>
