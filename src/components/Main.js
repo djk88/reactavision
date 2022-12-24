@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { ResultCard } from './ResultCard'
-import { API_KEY } from '../globals/globals';
+import { API_KEY } from '../globals/GlobalState';
 
 const POPULAR_API = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
 const TOP_RATED_API = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`;

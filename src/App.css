@@ -310,3 +310,17 @@ header .nav-links li:last-child {
 .select-wrapper {
   text-align: center;
 }
+
+/* footer styles */
+footer {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+footer p {
+  color: var(--white);
+  font-size: 1.25rem;
+}
