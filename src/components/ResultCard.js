@@ -1,14 +1,22 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 export const ResultCard = ({ movie }) => {
     return (
         <div className="result-card">
             <div className="poster-wrapper">
+                <Link
+                key={movie.id}
+                to={`/PageMovieDetails/${movie.id}`}
+                className="movie-item"
+                state={{ movie: movie }}
+                >
                 {movie.poster_path ? (<img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
                     alt={`${movie.title} Poster`} />
                 ) : (
                     <div className="filler-poster"></div>
                 )}
+            </Link>
             </div>
             <div className="info">
                 <div className="header">

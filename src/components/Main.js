@@ -36,7 +36,7 @@ export const Main = () => {
         fetch(endPoint)
             .then(res => res.json())
             .then(data => {
-                setMovies(data.results.slice(0, 12))
+                setMovies(data.results)
             });
     }, [endPoint])
 
