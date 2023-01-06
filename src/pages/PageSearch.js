@@ -20,7 +20,8 @@ export const PageSearch = () => {
                 } else {
                     setResults([])
                 }
-            });
+            })
+            .catch((err) => console.log(err.message));
     };
 
     return (
@@ -28,7 +29,7 @@ export const PageSearch = () => {
             <div className="container">
                 <div className="add-content">
                     <div className="input-wrapper">
-                        <input type="text" placeHolder="Search" value={query} onChange={onChange}></input>
+                        <input type="text" placeholder="Search" value={query} onChange={onChange}></input>
                     </div>
                     {results.length > 0 && (
                         <ul className="results">

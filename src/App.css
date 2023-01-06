@@ -23,6 +23,7 @@ body {
   display: flex;
   margin: 20px;
 }
+
 .detail-container .info {
   margin-left: 20px;
   width: 500px;
@@ -188,8 +189,7 @@ header .nav-links li:last-child {
 
 .result-card .poster-wrapper img,
 .filler-poster {
-  width: 200px;
-
+  width: 250px;
   background-color: #dbdada;
   border-radius: 5px;
   margin-right: 15px;
@@ -248,15 +248,31 @@ header .nav-links li:last-child {
   margin: 0;
 }
 
-.movie-grid {
+.favorite-movie-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.main-movie-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  list-style: none;
+  padding: 0;
 }
 
 @media (min-width: 992px) {
-  .movie-grid {
+  .favorite-movie-grid {
     grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+  }
+
+  .main-movie-grid {
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
   }
 }
 
@@ -329,6 +345,8 @@ header .nav-links li:last-child {
 
 .movies {
   list-style-type: none;
+  /* display: flex;
+  max-width: 400px; */
 }
 
 .select-wrapper {

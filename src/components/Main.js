@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { ResultCard } from './ResultCard'
+// import { ResultCard } from './ResultCard'
+import { MovieCard } from './MovieCard';
 import { API_KEY } from '../globals/GlobalState';
 
 const POPULAR_API = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
@@ -36,9 +37,10 @@ export const Main = () => {
         fetch(endPoint)
             .then(res => res.json())
             .then(data => {
-                setMovies(data.results)
+                setMovies(data.results.slice(0, 12))
             });
     }, [endPoint])
+
 
     return (
         <div className="add-page">
@@ -53,10 +55,10 @@ export const Main = () => {
                     </select>
                 </div>
                 {movies.length > 0 && (
-                    <ul className="movies">
+                    <ul className="main-movie-grid">
                         {movies.map(movie => (
                             <li key={movie.id}>
-                                <ResultCard movie={movie} />
+                                <MovieCard movie={movie} />
                             </li>
                         ))}
                     </ul>

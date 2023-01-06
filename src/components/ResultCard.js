@@ -14,17 +14,17 @@ export const ResultCard = ({ movie, type }) => {
         <div className="result-card">
             <div className="poster-wrapper">
                 <Link
-                key={movie.id}
-                to={`/PageMovieDetails/${movie.id}`}
-                className="movie-item"
-                state={{ movie: movie }}
+                    key={movie.id}
+                    to={`/PageMovieDetails/${movie.id}`}
+                    className="movie-item"
+                    state={{ movie: movie }}
                 >
-                {movie.poster_path ? (<img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
-                    alt={`${movie.title} Poster`} />
-                ) : (
-                    <div className="filler-poster"></div>)}
-            </Link>
-
+                    {movie.poster_path ? (<img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+                        alt={`${movie.title} Poster`} />
+                    ) : (
+                        <div className="filler-poster"></div>)}
+                </Link>
+                {/* <h4 className="rating">Rating: {movie.vote_average}</h4> */}
             </div>
             <div className="info">
                 <div className="header">
