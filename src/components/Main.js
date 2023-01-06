@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-// import { ResultCard } from './ResultCard'
 import { MovieCard } from './MovieCard';
 import { API_KEY } from '../globals/GlobalState';
 
@@ -45,14 +44,18 @@ export const Main = () => {
     return (
         <div className="add-page">
             <div className="container">
-                <div className="select-wrapper">
-                    <select onChange={handleChange}>
+                <div className="sort-wrapper">
+                    <button className="btn-sort" value="popularMovies" onClick={handleChange}>Popular Movies</button>
+                    <button className="btn-sort" value="topRated" onClick={handleChange}>Top Rated</button>
+                    <button className="btn-sort" value="upcomming" onClick={handleChange}>Upcomming</button>
+                    <button className="btn-sort" value="nowPlaying" onClick={handleChange}>Now Playing</button>
+                    {/* <select onChange={handleChange}>
                         <option value="">Filter by Group</option>
                         <option value="popularMovies" >Popular Movies</option>
                         <option value="topRated" >Top Rated</option>
                         <option value="upcomming" >Upcomming</option>
                         <option value="nowPlaying" >Now Playing</option>
-                    </select>
+                    </select> */}
                 </div>
                 {movies.length > 0 && (
                     <ul className="main-movie-grid">
