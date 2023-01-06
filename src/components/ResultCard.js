@@ -8,7 +8,6 @@ export const ResultCard = ({ movie, type }) => {
 
     let favoriteMovie = favoriteList.find(x => x.id === movie.id);
 
-    const button = favoriteMovie ? true : false;
 
     return (
         <div className="result-card">
@@ -23,15 +22,18 @@ export const ResultCard = ({ movie, type }) => {
                     <h3 className="title">{movie.title}</h3>
                     <h4 className="release-date">{movie.release_date.substring(0, 4)}</h4>
                     <h4 className="rating">Rating: {movie.vote_average}</h4>
-                    <p className="overview">{movie.overview}</p>
+                    <p className="overview">{movie.overview.substring(0, 400)}</p>
                 </div>
                 <div className="controls">
-                    <button className="btn" disabled={button === true} onClick={() => addToFavoritesList(movie)}>
-                        <i className="fa-fw fa fa-heart"></i> Add to Favorites</button>
-                    <button className="btn" disabled={button === false} onClick={() => removeFromFavoritesList(movie.id)}>
-                        Remove from Favorites
-                    </button>
-
+                    {favoriteMovie ?
+                        <button className="btn-remove" onClick={() => removeFromFavoritesList(movie.id)}>
+                            Remove from Favorites
+                        </button>
+                        :
+                        <button className="btn" onClick={() => addToFavoritesList(movie)}>
+                            <i className="fa-fw fa fa-heart"></i> Add to Favorites
+                        </button>
+                    }
                 </div>
             </div>
         </div>
