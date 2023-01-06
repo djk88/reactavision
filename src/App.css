@@ -12,6 +12,19 @@ body {
   margin: 0;
 }
 
+.video-box{
+    position: relative; 
+    width: 100%;
+    padding-bottom: 56.25%; 
+}
+.video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+}
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -21,7 +34,7 @@ body {
 
 .detail-container {
   display: flex;
-  margin: 20px;
+  margin: 20px 270px;
 }
 
 .detail-container .info {
@@ -30,7 +43,7 @@ body {
 }
 
 .link {
-  margin-left: 20px;
+  margin-left: 270px;
 }
 
 @media (min-width: 768px) {
