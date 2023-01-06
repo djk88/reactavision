@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import { useContext } from 'react';
 import { GlobalContext } from '../globals/GlobalState';
 
@@ -12,10 +13,18 @@ export const ResultCard = ({ movie, type }) => {
     return (
         <div className="result-card">
             <div className="poster-wrapper">
+                <Link
+                key={movie.id}
+                to={`/PageMovieDetails/${movie.id}`}
+                className="movie-item"
+                state={{ movie: movie }}
+                >
                 {movie.poster_path ? (<img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
                     alt={`${movie.title} Poster`} />
                 ) : (
                     <div className="filler-poster"></div>)}
+            </Link>
+
             </div>
             <div className="info">
                 <div className="header">
