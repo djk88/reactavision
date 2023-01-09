@@ -29,7 +29,7 @@ export const PageSearch = () => {
             <div className="container">
                 <div className="add-content">
                     <div className="input-wrapper">
-                        <input type="text" placeholder="Search" value={query} onChange={onChange}></input>
+                        <input type="text" placeholder="Search movie by title" value={query} onChange={onChange}></input>
                     </div>
                     {results.length > 0 && (
                         <ul className="results">
