@@ -1,5 +1,9 @@
 import React from 'react'
 import team from '../image/team-first.png'
+import ownIt from '../image/own-it.png'
+import actWith from '../image/act-with-integrity.png'
+import grow from '../image/grow-yourself.png'
+import deliver from '../image/deliver-delight.png'
 
 export const PageAbout = () => {
     return (
@@ -22,24 +26,24 @@ export const PageAbout = () => {
                 <p>We are most successful when we work together and perform as one team. We empower each other, prioritize team success, and trust our teammates to do the same.</p>
                 </section>
                 <section>
-                <img src ={team}></img>
+                <img src ={ownIt}></img>
                 <h3>Own It</h3>
                 <p>We are all owners of the work that we do individually and as a team. We believe brilliant ideas can come from all corners of our organization, and encourage thought leadership from everyone at Tubi.</p>
                 </section>
                 <section>
-                <img src ={team}></img>
-                <h3>Own It</h3>
-                <p>We are all owners of the work that we do individually and as a team. We believe brilliant ideas can come from all corners of our organization, and encourage thought leadership from everyone at Tubi.</p>
+                <img src ={actWith}></img>
+                <h3>Act With Integrity</h3>
+                <p>We work with good people and do the right thing for the right reasons. We believe it’s important to treat our colleagues, teammates, stakeholders, and external partners with respect, empathy, and kindness.</p>
                 </section>
                 <section>
-                <img src ={team}></img>
-                <h3>Own It</h3>
-                <p>We are all owners of the work that we do individually and as a team. We believe brilliant ideas can come from all corners of our organization, and encourage thought leadership from everyone at Tubi.</p>
+                <img src ={grow}></img>
+                <h3>Grow Yourself</h3>
+                <p>Everyone owns their career journey and professional development at Tubi. When employees lean into their unique passions, interests, and skills at work, they grow their individual talents and team impact.</p>
                 </section>
                 <section>
-                <img src ={team}></img>
-                <h3>Own It</h3>
-                <p>We are all owners of the work that we do individually and as a team. We believe brilliant ideas can come from all corners of our organization, and encourage thought leadership from everyone at Tubi.</p>
+                <img src ={deliver}></img>
+                <h3>Deliver Delight</h3>
+                <p>We are customer-focused, curious, and passionate. We deliver delight in the form of an exceptional experience on all fronts – for our customers, partners, and employees – and we have fun doing it</p>
                 </section>
             </div>
         </div>
