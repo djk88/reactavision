@@ -9,27 +9,27 @@ export const PageMovieDetails = () => {
   const movie = location.state.movie;
   const [video, setVideo] = useState([]);
 
-  const getVideoDetails = async() => {
-    const json = await(await fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=a87239141e560f2d1ffa1d2c5b416813&language=en-US`)).json()
+  const getVideoDetails = async () => {
+    const json = await (await fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=a87239141e560f2d1ffa1d2c5b416813&language=en-US`)).json()
     setVideo(json.results[0].key)
-    
+
   }
-  useEffect(()=> {getVideoDetails()}, [id]);
+  useEffect(() => { getVideoDetails() }, [id]);
 
   //const TRAILER = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=a87239141e560f2d1ffa1d2c5b416813&language=en-US`
 
   const { addToFavoritesList, removeFromFavoritesList, favoriteList } = useContext(GlobalContext)
   let favoriteMovie = favoriteList.find(x => x.id === movie.id);
 
-    if (isNaN(id) ||  id < 0 ) {
-      return <Navigate to="/" replace={true} />;
-    }
-    
-    return (
+  if (isNaN(id) || id < 0) {
+    return <Navigate to="/" replace={true} />;
+  }
+
+  return (
     <div className="detail">
       <div className="detail-container">
-        <div class="video-box">
-        <iframe src={`https://www.youtube.com/embed/${video}?autoplay=1&mute=1&loop=1&modestbranding=1&playlist=${video}&controls=0`} allow="accelerometer; autoPlay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="video" allowFullScreen frameBorder="0"/>
+        <div className="video-box">
+          <iframe src={`https://www.youtube.com/embed/${video}?autoplay=1&mute=1&loop=1&modestbranding=1&playlist=${video}&controls=0`} allow="accelerometer; autoPlay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" className="video" allowFullScreen frameBorder="0" />
         </div>
         <div className="info">
           <h3 className="title">{movie.title}</h3>
@@ -38,23 +38,23 @@ export const PageMovieDetails = () => {
           <p className="overview">{movie.overview}</p>
           <div className="controls">
             {favoriteMovie ?
-                <button className="btn-remove" onClick={() => removeFromFavoritesList(movie.id)}>
-                    Remove from Favorites
-                </button>
-                :
-                <button className="btn" onClick={() => addToFavoritesList(movie)}>
-                    <i className="fa-fw fa fa-heart"></i> Add to Favorites
-                </button>
+              <button className="btn-remove" onClick={() => removeFromFavoritesList(movie.id)}>
+                Remove from Favorites
+              </button>
+              :
+              <button className="btn" onClick={() => addToFavoritesList(movie)}>
+                <i className="fa-fw fa fa-heart"></i> Add to Favorites
+              </button>
             }
           </div>
         </div>
       </div>
       <div className="link">
-      <Link to="/">
-          <p className="btn">Back to Main Page</p>
-      </Link>
+        <Link to="/">
+          <p className="btn"><i className="fa-fw fa fa-arrow-left"></i></p>
+        </Link>
       </div>
     </div>
-    );  
+  );
 }
 

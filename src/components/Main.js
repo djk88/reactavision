@@ -45,10 +45,16 @@ export const Main = () => {
         <div className="add-page">
             <div className="container">
                 <div className="sort-wrapper">
+                    {/* <a className="btn-sort" value="popularMovies" onClick={handleChange}>Popular Movies</a>
+                    <a className="btn-sort" value="topRated" onClick={handleChange}>Top Rated</a>
+                    <a className="btn-sort" value="upcomming" onClick={handleChange}>Upcomming</a>
+                    <a className="btn-sort" value="nowPlaying" onClick={handleChange}>Now Playing</a> */}
+
                     <button className="btn-sort" value="popularMovies" onClick={handleChange}>Popular Movies</button>
                     <button className="btn-sort" value="topRated" onClick={handleChange}>Top Rated</button>
                     <button className="btn-sort" value="upcomming" onClick={handleChange}>Upcomming</button>
                     <button className="btn-sort" value="nowPlaying" onClick={handleChange}>Now Playing</button>
+
                     {/* <select onChange={handleChange}>
                         <option value="">Filter by Group</option>
                         <option value="popularMovies" >Popular Movies</option>
