@@ -39,3 +39,9 @@ export const GlobalProvider = (props) => {
         </GlobalContext.Provider>
     );
 };
+
+//create different context
+//store current filter
+//slice context
+//one for favorite, home, search
+//can be stored in local store 

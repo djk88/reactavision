@@ -1,4 +1,4 @@
-import { Link, Navigate, useParams, useLocation } from "react-router-dom";
+import { Link, Navigate, useParams, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react'
 import { GlobalContext } from '../globals/GlobalState';
 import { useContext } from 'react';
@@ -8,6 +8,7 @@ export const PageMovieDetails = () => {
   const location = useLocation();
   const movie = location.state.movie;
   const [video, setVideo] = useState([]);
+  const history = useNavigate();
 
   const getVideoDetails = async () => {
     const json = await (await fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=a87239141e560f2d1ffa1d2c5b416813&language=en-US`)).json()
@@ -43,16 +44,19 @@ export const PageMovieDetails = () => {
               </button>
               :
               <button className="btn" onClick={() => addToFavoritesList(movie)}>
-                <i className="fa-fw fa fa-heart"></i> Add to Favorites
+                <i className="fa-fw fa fa-heart" title="saveFavoriteButton"></i> Add to Favorites
               </button>
             }
           </div>
         </div>
       </div>
       <div className="link">
-        <Link to="/">
+        {/* <Link to="/">
           <p className="btn"><i className="fa-fw fa fa-arrow-left"></i></p>
-        </Link>
+        </Link> */}
+        <button className="btn" onClick={() => history(-1, { replace: true })}>
+          <i className="fa-fw fa fa-arrow-left" title="arrowButton"></i>
+        </button>
       </div>
     </div>
   );
