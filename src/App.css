@@ -36,29 +36,23 @@ body {
 }
 
 
-.detail {
-  min-height: 100vh;
-}
 
 .detail-container {
-  display: flex;
-  margin: 20px 270px;
+  margin-top: 40px;
 }
 
-.detail-container .info {
-  margin-left: 20px;
-  width: 500px;
+.detail-container .detail-info {
+  margin: 20px 5px 30px;
+  background: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 700;
+  display: inline-block;
+  border: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  line-height: 1.1;
 }
 
-.link {
-  margin-left: 270px;
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
 
 *,
 *:before,
@@ -243,11 +237,50 @@ header .nav-links li:last-child {
 
 
 /* Sarch Page */
+.about_values {
+  color: white;
+}
+
+.about_section {
+  color: white;
+}
+
+.about_banner {
+  width: 100%;
+  min-width: 650px;
+  position: relative;
+}
+
+.about_banner_img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.about_banner_text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white
+}
+
+.about_banner_text h1 {
+  font-size: 3em;
+}
+
+.about_banner_text p {
+  font-size: 2em;
+}
+
+/* Add Page */
 .add-content {
   padding: 50px 0;
   margin: 0 auto;
   min-height: 100vh;
 }
+
 
 .add-content .input-wrapper input {
   width: 100%;
@@ -498,4 +531,168 @@ footer {
 footer p {
   color: var(--white);
   font-size: 1.25rem;
+}
+
+/* 
+.hidden{
+  position:absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: 5;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
+}
+
+.header-btn{
+  font-size: 3em;
+  position: relative;
+  top: -3px;
+  padding-right: 8px;
+}
+.header-btn:before{
+  content:'\2630';
+}
+
+nav{
+  text-decoration: none;
+  display: none;
+  width: 100%;
+  position: absolute;
+  top:53px;
+  left: 0;
+  background-color: black;
+  z-index: 999;
+}
+
+nav.show{
+  display: block;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  padding-top: 10px;
+}
+
+nav a{
+  display: block;
+  font-size: 1.5em;
+  padding-top: 10px;
+  padding-left: 10px;
+  line-height: 40px;
+  align-items: center;
+} */
+.about_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1300px;
+}
+
+.about_section>section {
+  max-width: 370px;
+  margin: 10px;
+  flex: 0 200px;
+  flex-shrink: 0;
+  flex-basis: 200px;
+  height: 550px;
+}
+
+.about_section>section>img {
+  width: 350px;
+}
+
+.about_section>section>p {
+  height: 150px;
+}
+
+.TMDb_attri {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.TMDb_attri>p {
+  color: white;
+}
+
+.TMDb_attri>img {
+  max-width: 100px;
+}
+
+section::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  position: relative;
+  align-content: center;
+  background: #fe322a;
+  margin-left: 20px;
+}
+
+.about_values {
+  text-align: center;
+  margin: 100px;
+}
+
+/* .nav-menu{
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 85px;
+  right:-100%;
+  transition: 850ms;
+} */
+
+/*
+@media (min-width: 1000px) {
+  
+  .header-btn{
+    display:none;
+  }
+  .nav-menu{
+    position:fixed;
+    right: -100%;
+  }
+  .nav-menu.active{
+    padding-top: 50px;
+    padding-left: 50px;
+  }
+  nav ul{
+      display: flex;
+  }
+  nav a{
+      padding: 0;
+      padding: 0 10px;
+      line-height: 50px;
+      
+  }
+}
+*/
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+
+  .about_banner_text h1 {
+    font-size: 4rem;
+  }
+
+  .about_banner_text p {
+    margin-top: 100px;
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
