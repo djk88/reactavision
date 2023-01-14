@@ -13,7 +13,8 @@ export const Main = () => {
     const [movies, setMovies] = useState([]);
     const [active, setActive] = useState("1")
     const [endPoint, setEndPoint] = useState(POPULAR_API)
-    const savedFilter = window.localStorage.getItem('SORT_BY');
+
+    // const savedFilter = window.localStorage.getItem('SORT_BY'); to be implemented later 
 
     const handleChange = (e) => {
         const newValue = e.target.value
@@ -39,6 +40,7 @@ export const Main = () => {
         }
     }
 
+
     useEffect(() => {
         window.localStorage.setItem('SORT_BY', endPoint)
         fetch(endPoint)
@@ -48,8 +50,9 @@ export const Main = () => {
             })
     }, [endPoint])
 
+
     return (
-        <div className="add-page">
+        <div className="main-page">
             <Banner />
             <div className="container">
                 <div className="sort-wrapper">
@@ -58,7 +61,6 @@ export const Main = () => {
                     <button className={active === "3" ? "btn-sort-active" : "btn-sort"} value="upcomming" onClick={handleChange} id="3">Upcomming</button>
                     <button className={active === "4" ? "btn-sort-active" : "btn-sort"} value="nowPlaying" onClick={handleChange} id="4">Now Playing</button>
                 </div>
-                { }
                 {movies.length > 0 && (
                     <ul className="main-movie-grid">
                         {movies.map(movie => (

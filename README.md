@@ -23,8 +23,7 @@ a.	Detailed instructions on how to properly upload your application to your port
 7.)	Upload your raw development files to the Learning Hub. 
 a.	Name your project folder using this format:
 i.	[student names…]-movie-app
-ii.	For example: if your group was Larry, Curly and Moe, your folder name would be: 
-1.	larry-curly-moe-movie-app
+ii.	For example: if your group was Larry, Curly and Moe, your folder name would be: 1.	larry-curly-moe-movie-app
 b.	Please do NOT upload the node_modules folder. This folder is large and is not needed for marking.  A 10% penalty will apply if node_modules are included in the final submission.
  
 <!-- Detailed App Specifications
@@ -60,19 +59,19 @@ Application Page Specifications
 All Pages
 -	The following should appear on all pages:
 <!-- o	Application title and/or logo that is linkable back to the home page -->
-o	Navigation component that enables the user to go to any page in the application from any page in the application.  
-Home Page
--	All the requirements from the “All Pages” requirements plus…
--	Form select element or other UI element (select box, radio buttons, links or just buttons…the UI is up to you) that allows a user to change the current movies displayed between the following options:
+<!-- o	Navigation component that enables the user to go to any page in the application from any page in the application.  
+Home Page -->
+<!-- -	All the requirements from the “All Pages” requirements plus… -->
+<!-- -	Form select element or other UI element (select box, radio buttons, links or just buttons…the UI is up to you) that allows a user to change the current movies displayed between the following options: -->
 <!-- o	Popular -->
 <!-- o	Top Rated -->
 <!-- o	Now Playing -->
 <!-- o	Upcoming (yet to be released) -->
--	On initial load of the application the page should display 12 of the most current popular movies (The Movie DB considers popular movies to be those that have the most ratings) 
+<!-- -	On initial load of the application the page should display 12 of the most current popular movies (The Movie DB considers popular movies to be those that have the most ratings)  -->
 <!-- o	The user can switch this list by using the form select or other UI element to change these 12 movies to: -->
-	The 12 most highly rated movies currently out
+<!-- 	The 12 most highly rated movies currently out
 	The 12 most recently released movies (movies that are currently playing)
-	The next 12 movies that will be released soon (upcoming)
+	The next 12 movies that will be released soon (upcoming) -->
 o	Each movie should display the following information:
 <!-- 	The movie’s poster -->
 <!-- •	If a poster is not available, then you should load a generic placeholder image -->
@@ -87,15 +86,15 @@ o	Each movie should display the following information:
 
 About Page
 -	All the requirements from the “All Pages” requirements plus…
--	A simple generic description about the application
--	Meet the TMDb attribution requirements on this page
-o	The TMDb attribution requirements include showing the TMDb logo and the following message:
+<!-- -	A simple generic description about the application -->
+<!-- -	Meet the TMDb attribution requirements on this page -->
+<!-- o	The TMDb attribution requirements include showing the TMDb logo and the following message:
 	"This product uses the TMDb API but is not endorsed or certified by TMDb."
-	The TMDb logo should be less prominent then the application logo and the logo should be placed in a way that does not give the appearance that your application is endorsed by TMDb
-	Read about attribution requirements on the FAQ page (look under the “What are the attribution requirements?” section)
+	The TMDb logo should be less prominent then the application logo and the logo should be placed in a way that does not give the appearance that your application is endorsed by TMDb -->
+<!-- 	Read about attribution requirements on the FAQ page (look under the “What are the attribution requirements?” section)
 •	https://www.themoviedb.org/faq/api
 •	Click the link below for TMDb logo images:
-o	https://www.themoviedb.org/about/logos-attribution
+o	https://www.themoviedb.org/about/logos-attribution -->
 Individual Movie Page
 -	This page is accessed when a user clicks on the “More Info” link on an individual movie 
 -	All the requirements from the “All Pages” requirements plus…

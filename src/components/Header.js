@@ -20,7 +20,7 @@ export const Header = () => {
                             <Link to="/PageFavoriteList">Favorite List</Link>
                         </li>
                         <li>
-                            <Link to="/PageSearch" className='btn-search'><i className="fa-fw fa fa-search"></i><span className='searchText'>Search</span></Link>
+                            <Link to="/PageSearch" className='btn-search'><i className="fa fa-search"></i><span className='searchText'>Search</span></Link>
                         </li>
                     </ul>
                 </div>

@@ -23,6 +23,7 @@ export const PageMovieDetails = () => {
   var rate = movie.vote_average;
   rate = parseFloat(rate);
   rate = rate * 10
+
   if (isNaN(id) || id < 0) {
     return <Navigate to="/" replace={true} />;
   }
@@ -30,16 +31,14 @@ export const PageMovieDetails = () => {
   return (
     <div className="container">
       <div className="detail-container">
-        <div className="link">
-          <Link to="/">
-            <p className="btn"><i className="fa-fw fa fa-arrow-left"></i></p>
-          </Link>
-        </div>
         <div className="video-box">
           <iframe src={`https://www.youtube.com/embed/${video}?autoplay=1&mute=1&loop=1&modestbranding=1&playlist=${video}&controls=0`} allow="accelerometer; autoPlay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" className="video" allowFullScreen frameBorder="0" />
         </div>
         <div className="detail-info">
           <div className="controls">
+            <Link to="/">
+              <p className="btn"><i className="fa-fw fa fa-arrow-left"></i></p>
+            </Link>
             {favoriteMovie ?
               <button className="btn-remove" onClick={() => removeFromFavoritesList(movie.id)}>
                 Remove from Favorites

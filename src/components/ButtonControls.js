@@ -10,9 +10,8 @@ export const ButtonControls = ({ movie, type }) => {
             {type === "favoriteList" && (
                 <>
                     <button className="ctrl-btn" onClick={() => removeFromFavoritesList(movie.id)}>
-                        <i className="fa-fw fa fa-times"></i>
+                        <i className="fa fa-trash"></i> remove
                     </button>
-
                 </>
             )}
         </div>

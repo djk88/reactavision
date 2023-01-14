@@ -2,6 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const MovieCard = ({ movie, type }) => {
+
+    var rate = movie.vote_average;
+    rate = parseFloat(rate);
+    rate = rate * 10
+
+
     return (
         <div className="movie-card">
             <div className="inner">
@@ -13,13 +19,18 @@ export const MovieCard = ({ movie, type }) => {
                 >
                     {movie.poster_path ? (
                         <img
-                            src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+                            src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
                             alt={`${movie.title} Poster`}
                         />)
                         :
-                        (<div className="filler-poster"></div>)}
+                        ((<img
+                            src={require(("../image/no-poster.png"))}
+                            alt={`${movie.title} Poster`}
+                        />))}
                 </Link>
             </div>
+            <h4 className="title">{movie.title}</h4>
+            <h4 className="release-date">{movie.release_date && movie.release_date.substring(0, 4)}</h4>
             <h4 className="rating">Rating: {movie.vote_average}</h4>
         </div>
     );

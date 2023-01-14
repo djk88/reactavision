@@ -1,17 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
   --primary: #fff;
   --secondary: #388fce;
   --white: #fff;
-  --background: rgba(27, 36, 51, 0.7)
+  --background: rgb(28, 29, 38);
+  --cardBackground: rgba(61, 66, 86, 0.8);
+  --movieTitle: rgba(255, 255, 255, 0.7);
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   padding: 0;
   margin: 0;
-  background: linear-gradient(rgb(158, 158, 158), 20%, rgb(51, 51, 51));
+  background-color: rgb(28, 29, 38)
 }
 
 .video-box {
@@ -63,7 +65,7 @@ body {
 .btn-search {
   border-radius: 99px;
   border: 2px solid white;
-  padding: 0 10px;
+  padding: 1px 10px;
 }
 
 .btn-sort {
@@ -96,34 +98,35 @@ body {
 
 .btn {
   padding: 10px 15px;
-  background-color: var(--secondary);
+  background-color: transparent;
   color: var(--primary);
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  border: none;
+  border: 1px solid white;
   font-size: 1rem;
   transition: all 0.3s ease;
   line-height: 1.1;
+  margin-right: 10px;
 }
 
 .btn-remove {
   padding: 10px 15px;
-  background-color: rgb(191, 0, 0);
+  background-color: transparent;
   color: var(--primary);
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  border: none;
+  border: 1px solid white;
   font-size: 1rem;
   transition: all 0.3s ease;
   line-height: 1.1;
 }
 
 .btn:hover {
-  background-color: #34c1ec;
+  color: rgba(255, 48, 48, 0.8);
   opacity: 1;
   cursor: pointer;
 }
@@ -135,7 +138,7 @@ body {
 }
 
 .btn-remove:hover {
-  background-color: rgb(255, 48, 48);
+  color: rgb(255, 48, 48);
   opacity: 1;
   cursor: pointer;
 }
@@ -232,7 +235,8 @@ header .nav-links li:last-child {
   top: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-radial-gradient(50% 25%, ellipse cover, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.85) 85%);
+  /* background: -webkit-radial-gradient(50% 25%, ellipse cover, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.85) 85%); */
+  background: linear-gradient(to bottom, rgb(52, 52, 52, 0.1) 0%, rgb(28, 29, 38) 90%);
 }
 
 
@@ -281,6 +285,10 @@ header .nav-links li:last-child {
   min-height: 100vh;
 }
 
+.main-page .container {
+  position: relative;
+  bottom: 100px
+}
 
 .add-content .input-wrapper input {
   width: 100%;
@@ -292,6 +300,7 @@ header .nav-links li:last-child {
   font-size: 1.25rem;
   box-shadow: 0 0 15px 0 rgb(0 0 0 / 40%);
 }
+
 
 ::placeholder {
   color: white
@@ -311,40 +320,63 @@ header .nav-links li:last-child {
   padding: 10px;
   display: flex;
   margin-bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--cardBackground);
   border-radius: 5px;
   box-shadow: 0 0 10px 0 rgb(0 0 0 / 40%);
 }
 
-.result-card .poster-wrapper img,
-.filler-poster {
+.result-card .poster-wrapper img {
   width: 250px;
-  background-color: #dbdada;
   border-radius: 5px;
   margin-right: 15px;
   display: block;
   color: transparent;
 }
 
+.filler-poster {
+  width: 250px;
+  background-color: #000000;
+  border-radius: 5px;
+  margin-right: 15px;
+  z-index: auto;
+  display: block;
+  opacity: 0.5;
+  position: relative;
+}
+
 .result-card .info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color: black;
 }
 
 .result-card .info .title {
-  font-size: 1.25rem;
-  color: black;
+  font-size: 1.5rem;
+  color: var(--movieTitle);
   font-weight: 600;
   margin: 0;
 }
 
 .result-card .info .release-date {
   font-size: 1.25rem;
+  margin: 0;
   font-weight: 300;
-  color: black;
+}
+
+.result-card .info .rating {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-left: 20px;
+}
+
+.result-card .info .overview {
+  padding-top: 20px;
+  font-size: 1.25rem;
+  font-weight: 400;
   margin: 0;
 }
+
 
 .result-card .controls button {
   margin-right: 10px;
@@ -402,7 +434,7 @@ header .nav-links li:last-child {
   }
 
   .main-movie-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     list-style: none;
   }
 
@@ -421,13 +453,39 @@ header .nav-links li:last-child {
   position: relative;
   border: 0;
   display: block;
-  background-color: rgb(188, 188, 188, 0.6);
+  background-color: var(--cardBackground);
   box-shadow: 0 0 30px 0 rgb(0 0 0 / 40%);
+  transition: all .3s ease-in-out;
 }
 
 .movie-card h4 {
-  margin-left: 10px;
+  margin: 0;
   justify-content: right;
+}
+
+.movie-card .title {
+  font-size: 1.2rem;
+  color: var(--movieTitle);
+  font-weight: 600;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px
+}
+
+.movie-card .release-date {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: black;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.movie-card .rating {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: black;
+  margin-left: 10px;
+  margin-bottom: 5px;
 }
 
 .movie-card img {
@@ -446,10 +504,7 @@ header .nav-links li:last-child {
   top: 0;
   width: 100%;
   height: 100%;
-  /* background: linear-gradient(45deg, rgba(0, 0, 0, 50%),
-      rgba(0, 0, 0, 10%)); */
-  /* background: -webkit-radial-gradient(50% 25%, ellipse cover, rgba(25, 92, 116, 0.85), rgba(41, 28, 66, 0.85) 90%); */
-  background: -webkit-radial-gradient(50% 25%, ellipse cover, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.85) 85%);
+  background: -webkit-radial-gradient(50% 55%, ellipse cover, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.6) 100%)
 }
 
 
@@ -476,24 +531,32 @@ header .nav-links li:last-child {
   padding: 3px;
   opacity: 0;
   transition: all 0.3s ease;
+  width: 100%;
+  text-align: center;
 }
 
 .movie-card:hover .inner-card-controls {
   opacity: 1;
 }
 
+.movie-card:hover {
+  transform: scale(1.02);
+}
+
 .ctrl-btn {
   color: #fefefe;
   background-color: transparent;
   border: none;
-  transition: all 0.3s ease;
   font-size: 1.25rem;
   padding: 5px;
   margin: 0;
+  color: #fe312a78;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .ctrl-btn:hover {
-  color: var(--secondary);
+  color: #fe322a;
   cursor: pointer;
 }
 
@@ -518,12 +581,10 @@ header .nav-links li:last-child {
 
 /* footer styles */
 footer {
-  background-color: rgba(255, 255, 255, 0.09);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 0;
-  /* position: fixed; */
   bottom: 0;
   width: 100%;
 }
@@ -533,57 +594,6 @@ footer p {
   font-size: 1.25rem;
 }
 
-/* 
-.hidden{
-  position:absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: 5;
-  overflow: hidden;
-  clip:rect(0,0,0,0);
-  border: 0;
-}
-
-.header-btn{
-  font-size: 3em;
-  position: relative;
-  top: -3px;
-  padding-right: 8px;
-}
-.header-btn:before{
-  content:'\2630';
-}
-
-nav{
-  text-decoration: none;
-  display: none;
-  width: 100%;
-  position: absolute;
-  top:53px;
-  left: 0;
-  background-color: black;
-  z-index: 999;
-}
-
-nav.show{
-  display: block;
-}
-
-nav ul {
-  padding: 0;
-  margin: 0;
-  padding-top: 10px;
-}
-
-nav a{
-  display: block;
-  font-size: 1.5em;
-  padding-top: 10px;
-  padding-left: 10px;
-  line-height: 40px;
-  align-items: center;
-} */
 .about_section {
   display: flex;
   flex-wrap: wrap;
@@ -639,42 +649,6 @@ section::after {
   margin: 100px;
 }
 
-/* .nav-menu{
-  width: 250px;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: 85px;
-  right:-100%;
-  transition: 850ms;
-} */
-
-/*
-@media (min-width: 1000px) {
-  
-  .header-btn{
-    display:none;
-  }
-  .nav-menu{
-    position:fixed;
-    right: -100%;
-  }
-  .nav-menu.active{
-    padding-top: 50px;
-    padding-left: 50px;
-  }
-  nav ul{
-      display: flex;
-  }
-  nav a{
-      padding: 0;
-      padding: 0 10px;
-      line-height: 50px;
-      
-  }
-}
-*/
 
 @media (min-width: 768px) {
   .container {
@@ -693,6 +667,6 @@ section::after {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1200px;
   }
 }
