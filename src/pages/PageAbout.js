@@ -12,12 +12,13 @@ export const PageAbout = () => {
         <div className="movie-page">
             <div className="container">
                 <div className="about_banner">
-                    <div>
-                        <img src={about} className="about_banner_img" alt='space background'></img>
-                        <div className='about_banner_text'>
-                            <h1>React Movie App </h1>
-                            <p>This website is a movie Introduction service that has access to the TMDB movie library. This app lets you sort by popular movies, top rated, upcomming and now playing. You can also save movies that interest you into favorites list!</p>
-                        </div>
+                    <img src={about} className="about_banner_img" alt='space background'></img>
+                    <div className='about_banner_text'>
+                        <h1>Welcome to <span className='logo'>REACT</span>AVISION</h1>
+                        <p>This website is a movie introduction service that has access to the TMDB movie library.</p>
+                        <p>This app lets you sort by popular movies, top-rated, upcoming and now playing.</p>
+                        <p>You can also save movies that interest you to your favorites list!</p>
+                        <p>Know the title of a movie? Go a head a search by title!</p>
                     </div>
                 </div>
                 <div className='about_values'>

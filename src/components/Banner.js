@@ -19,15 +19,19 @@ export const Banner = () => {
 
     return (
         <div className="random-banner">
-            <div className='inner'>
+            <div className="inner">
                 {banner.backdrop_path &&
-
                     (<img
                         src={`https://image.tmdb.org/t/p/original${banner.backdrop_path}`}
                         alt={`${banner.title} Poster`}
                     />)
                 }
+                <div className='main_banner_text'>
+                    <h1>Cant decide what to watch next?</h1>
+                    <p>You've come to the right place to explore!</p>
+                </div>
             </div>
         </div>
     )
 }
+
