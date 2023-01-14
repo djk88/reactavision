@@ -35,7 +35,7 @@ export const ResultCard = ({ movie, type }) => {
                 </Link>
             </div>
             <div className="info">
-                <div className="header">
+                <div className="search-card-info">
                     <h3 className="title">{movie.title}</h3>
                     <h4 className="release-date">{movie.release_date && movie.release_date.substring(0, 4)}<span className="rating">Rating: {rate}%</span></h4>
                     <p className="overview">{movie.overview.substring(0, 400)}</p>

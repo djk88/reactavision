@@ -37,21 +37,46 @@ body {
 }
 
 
-
+/* Detail page styles */
 .detail-container {
   margin-top: 40px;
 }
 
-.detail-container .detail-info {
-  margin: 20px 5px 30px;
+.detail-container {
+  margin-top: 20px;
   background: none;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 700;
+  color: var(--white);
   display: inline-block;
   border: none;
-  font-size: 1rem;
   transition: all 0.3s ease;
   line-height: 1.1;
+  min-height: 100vh;
+}
+
+.detail-container .info .title {
+  font-size: 1.5rem;
+  color: var(--movieTitle);
+  font-weight: 600;
+  margin: 0;
+}
+
+.detail-container .detail-info .release-date {
+  font-size: 1.25rem;
+  margin: 0;
+  font-weight: 300;
+}
+
+.detail-container .detail-info .rating {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-left: 20px;
+}
+
+.detail-container .detail-info .overview {
+  padding-top: 20px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0;
 }
 
 
@@ -621,7 +646,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 0;
   width: 100%;
 }
 
