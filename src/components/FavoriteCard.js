@@ -10,7 +10,10 @@ export const FavoriteCard = ({ movie, type }) => {
                     alt={`${movie.title} Poster`}
                 />)
                 :
-                (<div className="filler-poster"></div>)}
+                (<img
+                    src={require(("../image/filler-picture.png"))}
+                    alt={`${movie.title} Poster`}
+                />)}
             <ButtonControls type={type} movie={movie} />
         </div>
     )

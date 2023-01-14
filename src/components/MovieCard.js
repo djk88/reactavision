@@ -24,7 +24,7 @@ export const MovieCard = ({ movie, type }) => {
                         />)
                         :
                         ((<img
-                            src={require(("../image/no-poster.png"))}
+                            src={require(("../image/filler-picture.png"))}
                             alt={`${movie.title} Poster`}
                         />))}
                 </Link>
