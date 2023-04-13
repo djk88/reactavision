@@ -27,7 +27,7 @@ export const Main = () => {
                 setEndPoint(TOP_RATED_API);
                 setActive(e.target.id)
                 break;
-            case "upcomming":
+            case "upcoming":
                 setEndPoint(UPCOMMING_API);
                 setActive(e.target.id)
                 break;
@@ -58,7 +58,7 @@ export const Main = () => {
                 <div className="sort-wrapper">
                     <button className={active === "1" ? "btn-sort-active" : "btn-sort"} value="popularMovies" onClick={handleChange} id="1" >Popular Movies</button>
                     <button className={active === "2" ? "btn-sort-active" : "btn-sort"} value="topRated" onClick={handleChange} id="2">Top Rated</button>
-                    <button className={active === "3" ? "btn-sort-active" : "btn-sort"} value="upcomming" onClick={handleChange} id="3">Upcomming</button>
+                    <button className={active === "3" ? "btn-sort-active" : "btn-sort"} value="upcoming" onClick={handleChange} id="3">Upcoming</button>
                     <button className={active === "4" ? "btn-sort-active" : "btn-sort"} value="nowPlaying" onClick={handleChange} id="4">Now Playing</button>
                 </div>
                 {movies.length > 0 && (
