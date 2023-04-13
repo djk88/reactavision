@@ -16,7 +16,7 @@ Reactavision is built full with react using the TMDB API
   
 ## Installation
 
-  1. Clone the repository: <b>`git clone https://github.com/ceilidh-ashcroft-bcit/CakeFactory/`</b>.
+  1. Clone the repository: <b>`https://github.com/djk88/reactavision.git`</b>.
   2. Open VSCode and CD into the root directory
   3. npm install all node modules
   4. Enjoy!
